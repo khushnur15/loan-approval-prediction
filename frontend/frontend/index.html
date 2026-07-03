@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Approval Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Loan Approval Prediction</h1>
+
+        <form id="loanForm">
+            <input type="number" id="Gender" placeholder="Gender (1 Male, 0 Female)" required>
+            <input type="number" id="Married" placeholder="Married (1 Yes, 0 No)" required>
+            <input type="number" id="Dependents" placeholder="Dependents" required>
+            <input type="number" id="Education" placeholder="Education (1 Graduate, 0 Not Graduate)" required>
+            <input type="number" id="Self_Employed" placeholder="Self Employed (1 Yes, 0 No)" required>
+            <input type="number" id="ApplicantIncome" placeholder="Applicant Income" required>
+            <input type="number" id="CoapplicantIncome" placeholder="Coapplicant Income" required>
+            <input type="number" id="LoanAmount" placeholder="Loan Amount" required>
+            <input type="number" id="Loan_Amount_Term" placeholder="Loan Amount Term" required>
+            <input type="number" id="Credit_History" placeholder="Credit History (1 or 0)" required>
+            <input type="number" id="Property_Area" placeholder="Property Area (0 Rural,1 Semiurban,2 Urban)" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <h2 id="result"></h2>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
