@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Decision Report</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen flex items-center justify-center p-8">
+
+<div class="max-w-4xl w-full bg-slate-900 rounded-3xl p-12 shadow-2xl border border-slate-800">
+
+    <div class="text-center mb-10">
+
+        <h1 class="text-5xl font-bold mb-4">
+            🏦 Loan Approval Prediction System
+        </h1>
+
+        <p class="text-slate-400 text-xl">
+            AI Decision Engine Report
+        </p>
+
+    </div>
+
+    <div id="report"></div>
+
+    <div class="text-center mt-10">
+        <a href="/dashboard"
+           class="bg-blue-600 px-8 py-4 rounded-xl text-lg font-bold hover:bg-blue-700 transition">
+            New Analysis
+        </a>
+    </div>
+
+</div>
+
+<script>
+
+const result = JSON.parse(localStorage.getItem("loanResult"));
+
+const approved = result.prediction === "Approved";
+
+document.getElementById("report").innerHTML = `
+    <div class="text-center">
+
+        <div class="text-7xl mb-6">
+            ${approved ? "✅" : "❌"}
+        </div>
+
+        <h2 class="text-5xl font-bold mb-6 ${
+            approved ? "text-green-400" : "text-red-400"
+        }">
+
+            ${approved ? "LOAN APPROVED" : "LOAN REJECTED"}
+
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+
+            <div class="bg-slate-800 rounded-2xl p-6">
+                <div class="text-3xl font-bold text-blue-400">
+                    80%
+                </div>
+                <div class="text-slate-400 mt-2">
+                    Model Accuracy
+                </div>
+            </div>
+
+            <div class="bg-slate-800 rounded-2xl p-6">
+                <div class="text-3xl font-bold text-purple-400">
+                    ${approved ? "LOW" : "HIGH"}
+                </div>
+                <div class="text-slate-400 mt-2">
+                    Risk Category
+                </div>
+            </div>
+
+            <div class="bg-slate-800 rounded-2xl p-6">
+                <div class="text-3xl font-bold text-emerald-400">
+                    ${approved ? "Strong" : "Weak"}
+                </div>
+                <div class="text-slate-400 mt-2">
+                    Financial Profile
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-10 text-left bg-slate-800 rounded-2xl p-8">
+
+            <h3 class="text-2xl font-bold mb-5">
+                AI Analysis
+            </h3>
+
+            ${
+                approved
+                ?
+                `
+                <ul class="space-y-4 text-slate-300">
+                    <li>✅ Credit history supports approval.</li>
+                    <li>✅ Income profile matches approved applicants.</li>
+                    <li>✅ Loan amount is within acceptable limits.</li>
+                    <li>✅ Applicant risk profile is low.</li>
+                </ul>
+                `
+                :
+                `
+                <ul class="space-y-4 text-slate-300">
+                    <li>❌ Credit history is insufficient.</li>
+                    <li>❌ Loan amount appears high compared to income.</li>
+                    <li>❌ Applicant profile resembles previously rejected cases.</li>
+                    <li>❌ Financial risk level is elevated.</li>
+                </ul>
+                `
+            }
+
+        </div>
+
+    </div>
+`;
+
+</script>
+
+</body>
+</html>

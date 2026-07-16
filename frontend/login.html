@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Prediction System</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            background:
+                radial-gradient(circle at top left, #2563eb22, transparent 40%),
+                radial-gradient(circle at bottom right, #7c3aed22, transparent 40%),
+                #020617;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .floating {
+            animation: float 5s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+
+</head>
+
+<body class="text-white min-h-screen">
+
+    <div class="min-h-screen flex items-center justify-center px-8">
+
+        <div class="grid lg:grid-cols-2 gap-20 max-w-7xl items-center">
+
+            <!-- Left Side -->
+
+            <div>
+
+                <div class="text-blue-400 font-semibold text-lg mb-4">
+                    AI Powered Financial Intelligence
+                </div>
+
+                <h1 class="text-7xl font-bold leading-tight">
+                    Loan Approval
+                    <span class="text-blue-500">
+                        Prediction
+                    </span>
+                    System
+                </h1>
+
+                <p class="text-slate-400 text-xl mt-8 leading-9 max-w-2xl">
+                    Real-time machine learning powered loan eligibility
+                    assessment platform designed for modern banking
+                    and credit risk analysis.
+                </p>
+
+                <div class="grid grid-cols-3 gap-6 mt-14">
+
+                    <div class="glass rounded-3xl p-8 floating">
+                        <div class="text-5xl font-bold text-blue-400">
+                            80%
+                        </div>
+
+                        <div class="text-slate-400 mt-3">
+                            Model Accuracy
+                        </div>
+                    </div>
+
+                    <div class="glass rounded-3xl p-8 floating"
+                        style="animation-delay:1s">
+
+                        <div class="text-5xl font-bold text-emerald-400">
+                            15K+
+                        </div>
+
+                        <div class="text-slate-400 mt-3">
+                            Predictions
+                        </div>
+
+                    </div>
+
+                    <div class="glass rounded-3xl p-8 floating"
+                        style="animation-delay:2s">
+
+                        <div class="text-5xl font-bold text-purple-400">
+                            2.3s
+                        </div>
+
+                        <div class="text-slate-400 mt-3">
+                            Avg Decision
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Login Card -->
+
+            <div class="glass rounded-[40px] p-12 shadow-2xl">
+
+                <div class="mb-10">
+
+                    <div class="text-blue-400 text-sm uppercase tracking-widest mb-2">
+                        Secure Access Portal
+                    </div>
+
+                    <h2 class="text-4xl font-bold mb-3">
+                        Welcome Back 👋
+                    </h2>
+
+                    <p class="text-slate-400">
+                        Login to access your AI financial dashboard.
+                    </p>
+
+                </div>
+
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Email Address"
+                    class="w-full p-5 rounded-2xl bg-slate-900 border border-slate-700 mb-5 outline-none focus:border-blue-500"
+                >
+
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="Password"
+                    class="w-full p-5 rounded-2xl bg-slate-900 border border-slate-700 mb-8 outline-none focus:border-blue-500"
+                >
+
+                <button
+                    onclick="login()"
+                    class="w-full bg-blue-600 hover:bg-blue-700 transition p-5 rounded-2xl text-xl font-bold"
+                >
+                    Access Dashboard
+                </button>
+
+                <div class="mt-8 text-center text-slate-400">
+
+                    New here?
+
+                    <a
+                        href="/register"
+                        class="text-blue-400 font-semibold"
+                    >
+                        Create Account
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/auth.js"></script>
+
+</body>
+
+</html>

@@ -1,34 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Loan Approval Prediction</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Loan Eligibility Assessment</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Loan Approval Prediction</h1>
+<div class="container">
 
-        <form id="loanForm">
-            <input type="number" id="Gender" placeholder="Gender (1 Male, 0 Female)" required>
-            <input type="number" id="Married" placeholder="Married (1 Yes, 0 No)" required>
-            <input type="number" id="Dependents" placeholder="Dependents" required>
-            <input type="number" id="Education" placeholder="Education (1 Graduate, 0 Not Graduate)" required>
-            <input type="number" id="Self_Employed" placeholder="Self Employed (1 Yes, 0 No)" required>
-            <input type="number" id="ApplicantIncome" placeholder="Applicant Income" required>
-            <input type="number" id="CoapplicantIncome" placeholder="Coapplicant Income" required>
-            <input type="number" id="LoanAmount" placeholder="Loan Amount" required>
-            <input type="number" id="Loan_Amount_Term" placeholder="Loan Amount Term" required>
-            <input type="number" id="Credit_History" placeholder="Credit History (1 or 0)" required>
-            <input type="number" id="Property_Area" placeholder="Property Area (0 Rural,1 Semiurban,2 Urban)" required>
-
-            <button type="submit">Predict</button>
-        </form>
-
-        <h2 id="result"></h2>
+    <div class="header">
+        <h1>🏦 AI Loan Eligibility Assessment</h1>
+        <p>Get instant loan approval predictions using Machine Learning</p>
     </div>
 
-    <script src="script.js"></script>
+    <form id="loanForm">
+
+        <div class="section">
+            <h2>👤 Personal Information</h2>
+
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+
+            <select id="Gender" required>
+                <option value="">Select Gender</option>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+
+            <select id="Married" required>
+                <option value="">Marital Status</option>
+                <option value="1">Married</option>
+                <option value="0">Single</option>
+            </select>
+
+            <input type="number" id="Dependents" placeholder="Number of Dependents" required>
+        </div>
+
+        <div class="section">
+            <h2>🎓 Education & Employment</h2>
+
+            <select id="Education" required>
+                <option value="">Education Level</option>
+                <option value="1">Graduate</option>
+                <option value="0">Not Graduate</option>
+            </select>
+
+            <select id="Self_Employed" required>
+                <option value="">Self Employed?</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <input type="number" id="ApplicantIncome" placeholder="Monthly Income (₹)" required>
+
+            <input type="number" id="CoapplicantIncome" placeholder="Co-Applicant Income (₹)" required>
+        </div>
+
+        <div class="section">
+            <h2>🏠 Loan Details</h2>
+
+            <input type="number" id="LoanAmount" placeholder="Requested Loan Amount (₹)" required>
+
+            <input type="number" id="Loan_Amount_Term" placeholder="Loan Term (Months)" required>
+
+            <select id="Credit_History" required>
+                <option value="">Credit History</option>
+                <option value="1">Good Credit History</option>
+                <option value="0">Poor Credit History</option>
+            </select>
+
+            <select id="Property_Area" required>
+                <option value="">Property Area</option>
+                <option value="0">Rural</option>
+                <option value="1">Semi Urban</option>
+                <option value="2">Urban</option>
+            </select>
+        </div>
+
+        <button type="submit">
+            Analyze Loan Eligibility
+        </button>
+
+    </form>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
