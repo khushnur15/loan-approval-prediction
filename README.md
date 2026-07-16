@@ -42,31 +42,31 @@ An AI-powered fintech web application that predicts loan eligibility using Machi
 
 ## 🔑 Login Page
 
-![Login Page](screenshots/Screenshot%202026-07-16%20151911.png)
+![Login Page](Screenshot%202026-07-16%20151911.png)
 
 ---
 
 ## 📝 Registration Page
 
-![Register Page](screenshots/Screenshot%202026-07-16%20151925.png)
+![Register Page](Screenshot%202026-07-16%20151925.png)
 
 ---
 
 ## 📊 Loan Eligibility Dashboard
 
-![Dashboard](screenshots/Screenshot%202026-07-16%20152008.png)
+![Dashboard](Screenshot%202026-07-16%20152008.png)
 
 ---
 
 ## 💳 Application Form
 
-![Application Form](screenshots/Screenshot%202026-07-16%20152017.png)
+![Application Form](Screenshot%202026-07-16%20152017.png)
 
 ---
 
 ## ✅ AI Decision Report
 
-![AI Decision Report](screenshots/Screenshot%202026-07-16%20152228(1).png)
+![AI Decision Report](Screenshot%202026-07-16%20152228.png)
 
 ---
 
